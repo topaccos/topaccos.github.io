@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nginx on 沐暮屋</title><link>http://blog.671812.xyz:8082/tags/nginx/</link><description>Recent content from 沐暮屋</description><generator>Hugo</generator><language>zh-cn</language><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Sun, 18 May 2025 21:56:01 +0800</lastBuildDate><atom:link href="http://blog.671812.xyz:8082/tags/nginx/index.xml" rel="self" type="application/rss+xml"/><item><title>编译nginx的一些常见错误</title><link>http://blog.671812.xyz:8082/post/linux/nginx/</link><pubDate>Sun, 18 May 2025 21:56:01 +0800</pubDate><guid>http://blog.671812.xyz:8082/post/linux/nginx/</guid><description>
+<![CDATA[<h1>编译nginx的一些常见错误</h1><p>作者：沐沐（）</p>
+        
+          <h2 id="编译安装">
+<a class="header-anchor" href="#%e7%bc%96%e8%af%91%e5%ae%89%e8%a3%85"></a>
+编译安装
+</h2><p>本文使用Ubuntu 22.04</p>
+<h3 id="下载源码">
+<a class="header-anchor" href="#%e4%b8%8b%e8%bd%bd%e6%ba%90%e7%a0%81"></a>
+下载源码
+</h3><p>网址 <a href="https://nginx.org/en/download.html">https://nginx.org/en/download.html</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">wget https://nginx.org/download/nginx-1.20.2.tar.gz
+</span></span></code></pre></div><h3 id="解压并进入目录">
+<a class="header-anchor" href="#%e8%a7%a3%e5%8e%8b%e5%b9%b6%e8%bf%9b%e5%85%a5%e7%9b%ae%e5%bd%95"></a>
+解压并进入目录
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">tar -zxvf nginx-1.20.2.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">cd</span> nginx-1.20.2
+</span></span></code></pre></div><h3 id="配置">
+<a class="header-anchor" href="#%e9%85%8d%e7%bd%ae"></a>
+配置
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo ./configure --prefix<span class="o">=</span>/usr/local/nginx --with-select_module --with-poll_module --with-threads --with-file-aio --with-http_ssl_module --with-http_v2_module  --with-http_realip_module --with-http_addition_module --with-http_xslt_module --with-http_image_filter_module --with-http_geoip_module --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_auth_request_module --with-http_random_index_module --with-http_secure_link_module --with-http_degradation_module --with-http_slice_module --with-http_stub_status_module --with-http_perl_module --with-pcre --with-pcre-jit --with-debug --with-stream --with-stream_ssl_module --with-mail --with-mail_ssl_module
+</span></span></code></pre></div><h3 id="编译安装-1">
+<a class="header-anchor" href="#%e7%bc%96%e8%af%91%e5%ae%89%e8%a3%85-1"></a>
+编译安装
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo make <span class="o">&amp;&amp;</span> sudo make install
+</span></span></code></pre></div><h2 id="常见错误">
+<a class="header-anchor" href="#%e5%b8%b8%e8%a7%81%e9%94%99%e8%af%af"></a>
+常见错误
+</h2><p>./configure: error: the GeoIP module requires the GeoIP library.
+You can either do not enable the module or install the library.</p>
+        
+        <hr><p>本文2025-05-18首发于<a href='http://blog.671812.xyz:8082/'>沐暮屋</a>，最后修改于2025-05-18</p>]]></description><category>Linux</category></item></channel></rss>
