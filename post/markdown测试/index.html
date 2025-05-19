@@ -25,20 +25,32 @@ A[方形] --> B(圆角)
     C --> |a=2| E[结果2]
     F[竖向流程图]
 </pre><h3 id=uml><a class=header-anchor href=#uml></a>UML</h3><pre class=mermaid>
-      requirementDiagram
-
-    requirement test_req {
-    id: 1
-    text: the test text.
-    risk: high
-    verifymethod: test
+  ---
+title: Animal example
+---
+classDiagram
+    note "From Duck till Zebra"
+    Animal <|-- Duck
+    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
     }
-
-    element test_entity {
-    type: simulation
+    class Fish{
+        -int sizeInFeet
+        -canEat()
     }
-
-    test_entity - satisfies -> test_req
+    class Zebra{
+        +bool is_wild
+        +run()
+    }
 </pre><h3 id=饼图><a class=header-anchor href=#%e9%a5%bc%e5%9b%be></a>饼图</h3><pre class=mermaid>
   pie title Pets adopted by volunteers
     "Dogs" : 386
@@ -58,8 +70,8 @@ A[方形] --> B(圆角)
     participant B as 系统
     A->>B: 登录请求
     B-->>A: 登录成功
-</pre><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>使用脚注1&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>使用脚注2&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><footer class=article-footer><ul class=article-tag-list itemprop=keywords><li class=article-tag-list-item data-aos=zoom-in><a class=article-tag-list-link href=/tags/markdown rel=tag>MARKDOWN</a></li></ul></footer></div><nav id=article-nav data-aos=fade-up><div class="article-nav-link-wrap article-nav-link-right"><img data-src=https://6746578.xyz:8088/image/wallhaven-853emy.jpg data-sizes=auto alt=编译nginx的一些常见错误 class=lazyload><a href=/post/linux/nginx/></a><div class=article-nav-caption>后一篇</div><h3 class=article-nav-title>编译nginx的一些常见错误</h3></div></nav></article></section></div><footer id=footer><div style=width:100%;overflow:hidden><div class=footer-line></div></div><div id=footer-info><div><span class=icon-copyright></span>2020-2025<span class="footer-info-sep rotate"></span>
-沐沐</div><div>基于&nbsp;<a href=https://gohugo.io/ target=_blank>Hugo</a>&nbsp; Theme.<a href=https://github.com/D-Sketon/hugo-theme-reimu target=_blank>Reimu</a></div><div><span class=icon-brush>&nbsp;938</span>
+</pre><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>使用脚注1&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>使用脚注2&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><footer class=article-footer><ul class=article-tag-list itemprop=keywords><li class=article-tag-list-item data-aos=zoom-in><a class=article-tag-list-link href=/tags/markdown rel=tag>MARKDOWN</a></li></ul></footer></div><nav id=article-nav data-aos=fade-up><div class="article-nav-link-wrap article-nav-link-right"><img data-src=https://6746578.xyz:8088/image/wallhaven-839vgo.png data-sizes=auto alt=编译nginx的一些常见错误 class=lazyload><a href=/post/linux/nginx/></a><div class=article-nav-caption>后一篇</div><h3 class=article-nav-title>编译nginx的一些常见错误</h3></div></nav></article></section></div><footer id=footer><div style=width:100%;overflow:hidden><div class=footer-line></div></div><div id=footer-info><div><span class=icon-copyright></span>2020-2025<span class="footer-info-sep rotate"></span>
+沐沐</div><div>基于&nbsp;<a href=https://gohugo.io/ target=_blank>Hugo</a>&nbsp; Theme.<a href=https://github.com/D-Sketon/hugo-theme-reimu target=_blank>Reimu</a></div><div><span class=icon-brush>&nbsp;973</span>
 &nbsp;|&nbsp;
 <span class=icon-coffee>&nbsp;00:03</span></div><div><span class=icon-eye></span>
 <span id=busuanzi_container_site_pv>总访问量&nbsp;<span id=busuanzi_value_site_pv></span></span>
